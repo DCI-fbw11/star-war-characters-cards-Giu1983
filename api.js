@@ -21,8 +21,18 @@ function loadCharacter() {
 }
 
 
-
-
+function nextButton() {
+    if (pageNumber <9) {
+      pageNumber++;
+      fetchData();
+    }
+  }
+  function button() {
+    if (pageNumber > 1) {
+      pageNumber--;
+      fetchData();
+    }
+  }
 function handleData(data) {
     document.getElementById("demo").innerHTML = ""
     data.forEach(item => {
